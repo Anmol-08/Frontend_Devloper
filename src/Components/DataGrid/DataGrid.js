@@ -1,15 +1,23 @@
 import React, { useState, useEffect } from 'react';
-import './DataGrid.css';
+import './DataGrid.css'; 
+import Modal from '../Modal/Modal'; 
 
 const DataGrid = () => {
   const [data, setData] = useState([]);
-  
+  const [selectedItem, setSelectedItem] = useState(null);
+
+  const openModal = (item) => {
+    setSelectedItem(item);
+  };
+
+  const closeModal = () => {
+    setSelectedItem(null);
+  };
+
   useEffect(() => {
- 
     const mockData = [
       { id: 1, name: 'Rocket 1', description: 'Description of Rocket 1' },
       { id: 2, name: 'Rocket 2', description: 'Description of Rocket 2' },
-
     ];
 
     setData(mockData);
@@ -33,13 +41,14 @@ const DataGrid = () => {
               <td>{item.name}</td>
               <td>{item.description}</td>
               <td>
-                <button >View Details</button>
+                <button onClick={() => openModal(item)}>View Details</button>
               </td>
             </tr>
           ))}
         </tbody>
       </table>
 
+      {selectedItem && <Modal item={selectedItem} onClose={closeModal} />}
     </div>
   );
 };
