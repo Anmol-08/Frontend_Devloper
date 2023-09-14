@@ -1,0 +1,42 @@
+.banner {
+    background-image: url('https://www.cnet.com/a/img/resize/65bbc9fb7a559bf752d4fef5eca83cfd8065fe83/hub/2022/03/18/67b4747e-233c-46d7-a696-04ea4e557656/starlink-slc40-desktop.jpg?auto=webp&fit=crop&height=675&width=1200'); /* Replace with SpaceX background image */
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding: 4rem 0;
+    text-align: center;
+    position: relative;
+  }
+  
+  .banner-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  .banner-content h1 {
+    font-size: 3rem;
+    margin: 0;
+  }
+  
+  .banner-content p {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+  }
+  
+  .cta-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    display: inline-block;
+    margin-top: 1rem;
+  }
+  
+  .cta-button:hover {
+    background-color: #00438d;
+  }
+  
