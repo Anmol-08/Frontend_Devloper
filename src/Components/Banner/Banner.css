@@ -1,19 +1,81 @@
 .banner {
-    background-image: url('https://www.cnet.com/a/img/resize/65bbc9fb7a559bf752d4fef5eca83cfd8065fe83/hub/2022/03/18/67b4747e-233c-46d7-a696-04ea4e557656/starlink-slc40-desktop.jpg?auto=webp&fit=crop&height=675&width=1200'); /* Replace with SpaceX background image */
     background-size: cover;
     background-position: center;
-    color: #fff;
-    padding: 4rem 0;
+    color: rgb(255, 255, 255);
     text-align: center;
     position: relative;
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .banner-carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+ .banner-content > h1,
+ .banner-content > p{
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    -webkit-text-stroke: 2px black;
+ }
+
+  .carousel-image {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .carousel-image.active {
+    opacity: 1;
+  }
+  
+  .carousel-controls {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+  }
+  
+  .carousel-control {
+    width: 10px;
+    height: 10px;
+    border: 2px solid white;
+    background-color: transparent;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+  
+  .carousel-control.active {
+    background-color: white;
   }
   
   .banner-content {
-    max-width: 800px;
+    max-width: 100%;
     margin: 0 auto;
-    padding: 2rem;
-  }
-  
+    padding: 0;
+    text-align: right;
+    animation: slide-up 2s ease-in-out;
+    position: relative;
+    -webkit-animation: slide-up 2s ease-in-out;
+}
+
   .banner-content h1 {
     font-size: 3rem;
     margin: 0;
@@ -38,5 +100,16 @@
   
   .cta-button:hover {
     background-color: #00438d;
+  }
+  
+  @keyframes slide-up {
+    from {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
   }
   

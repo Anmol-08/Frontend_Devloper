@@ -6,7 +6,7 @@ export const fetchAllRocketDetails = () => {
       return response.data;
     })
     .catch((error) => {
-      console.error('Error fetching rocket details:', error);
+      console.error('Error fetching spacecraft details:', error);
       throw error;
     });
 };

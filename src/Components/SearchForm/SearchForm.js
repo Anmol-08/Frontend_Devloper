@@ -10,18 +10,28 @@ const SearchForm = ({ onSearch }) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    onSearch(searchCriteria);
+
+
+    if (searchCriteria.trim() !== '') {
+      onSearch(searchCriteria);
+    } else {
+      alert('Please enter a search term.');
+    }
   };
 
   return (
-    <div className="search-form">
+    <div className="search-form" id='search-bar'>
       <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          placeholder="Search SpaceX Data..."
-          value={searchCriteria}
-          onChange={handleInputChange}
-        />
+        <div className="filter">
+          <label>Search:</label>
+          <input
+            type="text"
+            name="search"
+            placeholder="Search for rockets, capsules, etc..."
+            value={searchCriteria}
+            onChange={handleInputChange}
+          />
+        </div>
         <button type="submit">Search</button>
       </form>
     </div>

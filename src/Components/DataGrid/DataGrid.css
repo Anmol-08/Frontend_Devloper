@@ -1,34 +1,51 @@
-.data-grid {
-    margin: 2rem 0;
-    padding: 2rem;
-    background-color: #f0f0f0; 
-    border-radius: 4px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+.data-grid-container {
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1)), #20232a;
+    padding: 20px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    margin-top: 20px;
+  }
+  .data-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
   }
   
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 2rem;
+  .data-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    width: 300px;
+    transition: transform 0.2s;
+    cursor: pointer;
   }
   
-  table, th, td {
-    border: 1px solid #ddd;
-    padding: 1rem;
-    text-align: left;
+  .data-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .data-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+  }
+  
+  .data-card p {
+    font-size: 1rem;
+    color: #333;
   }
   
   .action-button {
-    background-color: #0056b3;
+    background-color: #007bff;
     color: #fff;
     border: none;
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
+    padding: 8px 16px;
+    border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
+    transition: background-color 0.3s;
   }
   
   .action-button:hover {
-    background-color: #00438d;
+    background-color: #0056b3;
   }
   

@@ -1,9 +1,7 @@
 import axios from 'axios';
 
-const baseURL = 'https://api.spacexdata.com/v4/';
-
 const api = axios.create({
-  baseURL,
+  baseURL: 'https://api.spacexdata.com/v4/',
 });
 
 export default api;
