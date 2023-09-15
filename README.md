@@ -17,3 +17,5 @@ Technologies Used
 -React
 -JavaScript
 -CSS
+
+URL for the working of app: https://drive.google.com/file/d/1IDtUGR8DM75j4Nf7R9KsQva1E4vqsn0n/view?usp=sharing
