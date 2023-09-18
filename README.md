@@ -18,4 +18,5 @@ Technologies Used
 -JavaScript
 -CSS
 
+Deployed Link of app: https://imaginative-florentine-d1f741.netlify.app/
 URL for the working of app: https://drive.google.com/file/d/1IDtUGR8DM75j4Nf7R9KsQva1E4vqsn0n/view?usp=sharing
